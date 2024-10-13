@@ -7,6 +7,11 @@ body {
   /* Отступы */
   margin: 0;
 }
+
+a {
+  text-decoration: none;
+  color: #000;
+}
 .maincont {
   display: flex;
   height: auto;
@@ -14,11 +19,47 @@ body {
 
   justify-content: center;
 }
+.navpanel {
+  background-color: rgba(207, 207, 207, 0.308);
+  width: 100%;
+  height: 9vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.navi {
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  color: rgb(0, 0, 0);
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
 
+.navi:hover {
+  background-color: rgba(0, 0, 0, 0.137);
+
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  cursor: pointer;
+}
 .logo {
   width: 100%;
-  height: 200px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 /* Стили для сетки карточек */
 .card-grid {
   /* Отображение как сетка */
@@ -47,19 +88,67 @@ body {
 /* Стили для карточек */
 .card {
   /* Цвет фона */
-  background-color: rgb(112, 80, 255);
+  background-color: rgb(255, 255, 255);
   /* Радиус скругления углов */
   border-radius: 10px;
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
 }
-
-/* Стили для конкретных карточек */
+@keyframes changeBackgroundcard-prod1 {
+  0% {
+    background-image: url("https://ae04.alicdn.com/kf/Hc4008f424b0d4a48ba4cf05b238943beO.jpg");
+  }
+  25% {
+    background-image: url("https://ae04.alicdn.com/kf/Sce166b1320b84aa4b803ef6550d78fe1i.jpg_640x640.jpg");
+  }
+  50% {
+    background-image: url("https://img.joomcdn.net/f2b0607cec27ebd098ad61339924fe8e959259a6_1024_1024.jpeg");
+  }
+  75% {
+    background-image: url("https://ae04.alicdn.com/kf/Hc4008f424b0d4a48ba4cf05b238943beO.jpg");
+  }
+  100% {
+    background-image: url("https://ae04.alicdn.com/kf/Hc4008f424b0d4a48ba4cf05b238943beO.jpg");
+  }
+} /* Стили для конкретных карточек */
 .card-prod1 {
+  background-image: url("https://ae04.alicdn.com/kf/Hc4008f424b0d4a48ba4cf05b238943beO.jpg");
+  background-repeat: no-repeat;
+
+  background-size: contain;
+  background-position: center;
+  animation: changeBackgroundcard-prod1 9s infinite;
+
   /* Область сетки */
   grid-area: w1;
   /* Отступы */
   padding: 20px;
 }
+@keyframes changeBackgroundcard-prod2 {
+  0% {
+    background-image: url("https://www.jpsnasti.ru/crn_fls/jps2_sphoto/2670_main.webp");
+  }
+  25% {
+    background-image: url("https://klevulov.ru/images/extranews/600_obzor-jackall-tiny-magallon-otzivy.jpg");
+  }
+  50% {
+    background-image: url("https://img.joomcdn.net/f2b0607cec27ebd098ad61339924fe8e959259a6_1024_1024.jpeg");
+  }
+  75% {
+    background-image: url("https://img.joomcdn.net/3793e546cd6d6517a7d683a5c486d0b73c53cb1c_1024_1024.jpeg");
+  }
+  100% {
+    background-image: url("https://www.jpsnasti.ru/crn_fls/jps2_sphoto/2670_main.webp");
+  }
+}
 .card-prod2 {
+  background-image: url("https://www.jpsnasti.ru/crn_fls/jps2_sphoto/2670_main.webp");
+  background-repeat: no-repeat;
+
+  background-size: contain;
+  background-position: center;
+  animation: changeBackgroundcard-prod2 10s infinite;
   /* Область сетки */
   grid-area: w2;
   /* Отступы */
@@ -107,9 +196,12 @@ body {
   /* Масштабирование */
   transform: scale(1.03);
   /* Переход */
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
   /* Курсор */
   cursor: pointer;
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
 }
 
 /* Стили для активного состояния */
@@ -125,7 +217,7 @@ body {
   /* Переход */
   transition: transform 0.5s ease-in-out;
 }
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .card-grid {
     /* Отображение как сетка */
     display: grid;
@@ -151,6 +243,9 @@ body {
     /* Автоматическое определение высоты строк */
     grid-auto-rows: 150px;
   }
+  .logo {
+    display: none;
+  }
 }
 @media screen and (max-width: 688px) {
   .card-grid {
@@ -172,4 +267,35 @@ body {
     /* Автоматическое определение высоты строк */
     grid-auto-rows: 150px;
   }
+  .logo {
+    display: none;
+  }
+}
+
+button {
+  height: 40px;
+  width: 100px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 10px;
+  border: 2px solid rgba(170, 170, 170, 0.295);
+}
+.search-input {
+  text-align: center;
+  align-items: center;
+  margin: 10px;
+  justify-self: center;
+  height: 40px;
+  display: flex;
+
+  border-radius: 10px;
+  border: 2px solid rgba(170, 170, 170, 0.295);
+  background-color: rgb(255, 255, 255);
+}
+button:hover {
+  background-color: rgba(0, 0, 0, 0.137);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
 }
